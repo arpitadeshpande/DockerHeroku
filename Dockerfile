@@ -17,6 +17,6 @@ RUN npm install
 
 #Expose port and start the application
 
-EXPOSE 3000
+#EXPOSE 3000
 
-CMD ["npm", "start"]
+CMD ["npm", "start"] gunicorn --bind 0.0.0.0:$PORT wsgi
